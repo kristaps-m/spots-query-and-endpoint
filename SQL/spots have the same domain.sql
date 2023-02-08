@@ -1,7 +1,7 @@
 -- website field, only contains the domain
 SELECT dbo.Parse_For_Domain_Name([website]) as Domain, 
 COUNT([coordinates]) as SpotCount
-FROM [spots].[dbo].[MY_TABLE_NEW]
+FROM [spots].[dbo].[MY_TABLE]
 WHERE [website] is NOT NULL
 -- how many spots have the same domain
 GROUP BY dbo.Parse_For_Domain_Name([website])
